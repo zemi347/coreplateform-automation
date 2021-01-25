@@ -13,23 +13,23 @@ import static java.lang.String.format;
 
 public class ExtentFactory {
 	static private WebDriver driver = DriverSingleton.setDriver();
+	@SuppressWarnings("deprecation")
 	public static ExtentReports getInstance(Object testClass) throws ParseException {
 
 //		try {
 //			FileUtils.forceDelete(new File(System.getProperty("user.dir") +"/test-output/"));
-//		} catch (IOException e) {
-//		}
-//		System.out.println(format("%1s Started", testClass.getClass().getSimpleName()));
-		// Date appended to Report.html
-//		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY_MM_dd_hh_mm_ss");
-//		String testName = simpleDateFormat.format(new Date()) + "_" + testClass.getClass().getSimpleName();
-//		String folderName = testClass.getClass().getPackage().getName();
-//		String Path = format("test-output/automation-results/test-report/%1s/%2s.html", folderName,testName);
-		String Path =System.getProperty("user.dir") + "/test-output/automation-results.html";
-		ExtentReports extent;
-		extent = new ExtentReports(Path, false);
+//		} catch (IOException e)
+
+			System.out.println(String.format("%1s Started", testClass.getClass().getSimpleName()));
+			// Date appended to Report.html
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM_dd_hh_mm_ss");
+			String testName = simpleDateFormat.format(new Date()) + "_" + testClass.getClass().getSimpleName();
+		//	String folderName = testClass.getClass().getPackage().getName();
+			String Path = String.format("test-output/automation-results/expert-models/test-report/%1s.html", testName);
+
+			ExtentReports extent;
+			extent = new ExtentReports(Path, false);
 		extent.loadConfig(new File(System.getProperty("user.dir")+"/extent-config.xml"));
-		//extent.loadConfig(new File(format("extent-config.xml", System.getProperty("user.dir"))));
 		extent	.addSystemInfo("Host Name"	, "QA AUTOMATION TEAM")
 				.addSystemInfo("Environment"	, "QA/TEST")
 				.addSystemInfo("User Name"	, "Muhammad Ali");

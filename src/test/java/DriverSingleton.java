@@ -36,27 +36,47 @@ public class DriverSingleton {
 			}
 			else {
 
-				System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-				String downloadFilepath = System.getProperty("downloadFilepath");
-				HashMap<String, Object> chromePrefs = new HashMap<>();
-				chromePrefs.put("profile.default_content_settings.popups", 0);
-				chromePrefs.put("download.default_directory", downloadFilepath);
-//				WebDriverManager.chromedriver().setup();
-				ChromeOptions options = new ChromeOptions();
-				//options.setExperimentalOption("prefs", chromePrefs);
-				options.addArguments("--no-sandbox");
-				options.addArguments("--headless"); //should be enabled for Jenkins
-				options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
-				options.addArguments("--window-size=1920x1080"); //should be enabled for Jenkins
 
-				driver = new ChromeDriver(options);
-
+				WebDriverManager.chromedriver().setup();
+				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--headless");
+				chromeOptions.addArguments("start-maximized");
+				chromeOptions.addArguments("disable-infobars");
+				chromeOptions.addArguments("--disable-extensions");
+				chromeOptions.addArguments("--disable-gpu");
+				chromeOptions.addArguments("--disable-dev-shm-usage");
+				chromeOptions.addArguments("--no-sandbox");
+				driver = new ChromeDriver(chromeOptions);
 				LoggingPreferences logPrefs = new LoggingPreferences();
 				logPrefs.enable(LogType.BROWSER, Level.SEVERE);
-				System.out.println("Using Google Chrome");
 				driver.get("https://www.google.com/");
-				System.out.println(os);
+				//System.out.println("Using Google Chrome : OS " + Constants.OSDetector());
 			}
+
+
+
+
+//				System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//				String downloadFilepath = System.getProperty("downloadFilepath");
+//				HashMap<String, Object> chromePrefs = new HashMap<>();
+//				chromePrefs.put("profile.default_content_settings.popups", 0);
+//				chromePrefs.put("download.default_directory", downloadFilepath);
+//				//WebDriverManager.chromedriver().setup();
+//				ChromeOptions options = new ChromeOptions();
+//				//options.setExperimentalOption("prefs", chromePrefs);
+//				options.addArguments("--no-sandbox");
+//				options.addArguments("--headless"); //should be enabled for Jenkins
+//				options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
+//				options.addArguments("--window-size=1920x1080"); //should be enabled for Jenkins
+//
+//				driver = new ChromeDriver(options);
+//
+//				LoggingPreferences logPrefs = new LoggingPreferences();
+//				logPrefs.enable(LogType.BROWSER, Level.SEVERE);
+//				System.out.println("Using Google Chrome");
+//				driver.get("https://www.google.com/");
+//				System.out.println(os);
+			
 
 		}
 
