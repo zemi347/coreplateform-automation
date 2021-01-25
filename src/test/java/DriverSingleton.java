@@ -35,12 +35,12 @@ public class DriverSingleton {
 			}
 			else {
 
-//				System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-//				String downloadFilepath = System.getProperty("downloadFilepath");
-//				HashMap<String, Object> chromePrefs = new HashMap<>();
-//				chromePrefs.put("profile.default_content_settings.popups", 0);
-//				chromePrefs.put("download.default_directory", downloadFilepath);
-				WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+			String downloadFilepath = System.getProperty("downloadFilepath");
+			HashMap<String, Object> chromePrefs = new HashMap<>();
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+			chromePrefs.put("download.default_directory", downloadFilepath);
+				//WebDriverManager.chromedriver().setup();
 				ChromeOptions options = new ChromeOptions();
 				//options.setExperimentalOption("prefs", chromePrefs);
 				options.addArguments("--no-sandbox");
