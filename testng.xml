@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="CORE-PLATEFORM - SMOKE TEST" preserve-order="true">
+	<test name="Header SMOKE Suite" preserve-order="true">
+		<classes>
+			<!--
+		  <parameter name = "myName" value="qa.automation.com"/>
+		  <parameter name = "myPassword" value="automation123"/>
+
+		  <class name="Reg_EMHeader.SearchFunctionality" />
+			-->
+			<class name="TESTAPP" />
+
+		</classes>
+	</test>
+
+</suite>
+

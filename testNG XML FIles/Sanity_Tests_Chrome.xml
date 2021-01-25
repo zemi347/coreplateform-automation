@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Expert Models - Sanity Test">
+	
+	<test name="File System Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_FileSystem.SystemFolderRedirectAndNavigation" />
+			<class name="Reg_FileSystem.RenameFunctionality" />
+			<class name="Reg_FileSystem.CopyFunctionality" />
+			<class name="Reg_FileSystem.CopyToFunctionality" />
+			<class name="Reg_FileSystem.UndoFunctionality" />
+			<class name="Reg_FileSystem.TrashActionFunctionality" />
+			<class name="Reg_FileSystem.TrashFolderFunctionality" />
+			<class name="Reg_FileSystem.MoveFunctionality" />
+			<class name="Reg_FileSystem.SortFunctionality" />
+		</classes>
+	</test>
+	
+	<test name="Editor Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_Editor.Viewer" />
+			<class name="Reg_Editor.EditFunctionality" />
+			<class name="Reg_Editor.OptionMenuWriteFunctionality" />
+			<class name="Reg_Editor.OptionMenuNoWriteFunctionality" />
+			<class name="Reg_Editor.EditMenuWriteFunctionality" />
+			<class name="Reg_Editor.EditMenuNoWriteFunctionality" />
+			<class name="Reg_Editor.InsertMenuFunctionality" />
+			<class name="Reg_Editor.RightClickMenuFunctionality" />
+			<class name="Reg_Editor.IconBarFunctionality" />
+			<class name="Reg_Editor.ErrorSectionArea" />
+			<class name="Reg_Editor.CopyFilteredTableFunctionality" />
+			<class name="Reg_Editor.ViewMenuFunctionality" />
+			<class name="Reg_Editor.FileMenuWriteFunctionality" />
+			<class name="Reg_Editor.FileMenuNoWriteFunctionality" />
+
+		</classes>
+	</test>
+	<test name="Charting Tool Regression Tests" preserve-order="true">
+		<classes>
+			<class name="Reg_ChartingTool.PieChartComponents" />
+			<class name="Reg_ChartingTool.BarChartComponents" />
+			<class name="Reg_ChartingTool.LineChartComponents" />
+			<class name="Reg_ChartingTool.BoxplotChartComponents" />		
+			<class name="Reg_ChartingTool.HistogramChartComponents" />
+			<class name="Reg_ChartingTool.PieChartFunctionality" />
+			<class name="Reg_ChartingTool.BarChartFunctionality" />
+			<class name="Reg_ChartingTool.LaunchChartToolFunctionality" />
+			<class name="Reg_ChartingTool.LineChartFunctionality" />
+			<class name="Reg_ChartingTool.HistogramChartFunctionality" />
+			<class name="Reg_ChartingTool.BoxplotChartFunctionality" />
+			<class name="Reg_ChartingTool.GraphDisplayFunctionality" />
+      </classes>
+	</test>
+	
+	<test name="File Picker Regression Tests" preserve-order="true">
+        <classes>
+            <class name="Reg_FilePicker.LaunchingOptions" />
+            <class name="Reg_FilePicker.SelectValidFileFunctionality"/>
+            <class name="Reg_FilePicker.SelectInvalidFileFunctionality"/>
+            <class name="Reg_FilePicker.WritePermissions"/>
+            <class name="Reg_FilePicker.NonWritePermissions"/>
+        </classes>
+	</test>
+    <test name="Generic Wizard Regression Tests" preserve-order="true">
+        <classes>
+            <class name="reg_GenericWizard.GenericWizardHeaderFunctionality" />
+            <class name="reg_GenericWizard.GenericWizardPageFunctionality" />
+            <class name="reg_GenericWizard.GenericWizardTableFunctionality" />
+            <class name="reg_GenericWizard.GenericWizardFiltersFunctionality" />
+        </classes>
+	</test>
+	<test name="Results Viewer Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_ResultsViewer.ResultsViewerComponents" />
+			<class name="Reg_ResultsViewer.InputTabFunctionality" />
+			<class name="Reg_ResultsViewer.TableTabsFunctionality" />	
+			<class name="Reg_ResultsViewer.ReportTabFunctionality" />
+		</classes>
+	</test>
+	<test name="Filter UI Filter Section" preserve-order="true">
+		<classes>
+			<class name="Reg_Filter.UiFilterSection" />
+			<class name="Reg_Filter.ClearandCloseAddFilterAndDeleteFilter" />
+			<class name="Reg_Filter.HideFilterAndFilterStatusBar" />		
+			<class name="Reg_Filter.FilterTextFilterFunctionality" />
+			<class name="Reg_Filter.FilterNumericFilterFunctionality" />
+			<class name="Reg_Filter.FilterFilepickerFilterFunctionality" />
+			<class name="Reg_Filter.FilterSelectFilterFunctionality" />		
+			<class name="Reg_Filter.FilterCheckboxFilterFunctionality" />
+			<class name="Reg_Filter.FilterDistributionFilterFunctionality" />						
+		</classes>
+	</test>
+	<test name="Cares Wizard Regression Suite" preserve-order="true">
+		<classes>
+			<class name="CaresWizard.newAssessmentPageFoodModel" />
+			<class name="CaresWizard.newAssessmentPageResidentialModel" />
+			<class name="CaresWizard.populationPageFoodModel" />
+			<class name="CaresWizard.populationPageResidentialModel" />
+			<class name="CaresWizard.chemicalPageFoodModelUI" />
+			<class name="CaresWizard.chemicalPageResidentialModelUI" />
+			<class name="CaresWizard.chemicalPageSingleChemicalFoodModel" />
+			<class name="CaresWizard.chemicalPageSingleChemicalResidentialModel" />
+			<class name="CaresWizard.chemicalPageMultipleChemicalsFoodModel" />
+			<class name="CaresWizard.toxicologyTabFoodModel" />
+			<class name="CaresWizard.toxicologyTabResidentialModel" />
+			<class name="CaresWizard.foodPageFoodModelUI" />
+			<class name="CaresWizard.foodPageFunctionalityFoodModel" />
+			<class name="CaresWizard.statisticsPageExposureOnly" />
+			<class name="CaresWizard.statisticsPageAggregate" />
+			<class name="CaresWizard.statisticsPageCumulative" />
+			<class name="CaresWizard.statisticsPageResidentialModel" />
+			<class name="CaresWizard.productsAndScenariosPageResidentialModelUI" />
+			<class name="CaresWizard.handlerAndPostApplicationPageResidentialModelUI" />
+			<class name="CaresWizard.handlerTabFunctionalityResidentialModel" />
+			<class name="CaresWizard.postApplicationTabFunctionalityResidentialModel" />
+			<class name="CaresWizard.productsAndScenariosPageFunctionalityResidentialModel" />
+			<class name="CaresWizard.pageNavigationFoodModel"/>
+			<class name="CaresWizard.pageNavigationResidentialModel"/>
+			<class name="CaresWizard.rerunningAggregateResidentialModel"/>
+			<class name="CaresWizard.rerunningFoodModel"/>
+			<class name="CaresWizard.customPopulationPageOptionsFoodModel"/>
+			<class name="CaresWizard.customPopulationCreationFunctionalityFoodModel"/>
+		</classes>
+	</test>		
+		<test name="PDP Tool Regression Tests" preserve-order="true">
+		<classes>
+			<class name="PDPTool.PDPLaunchingOptions"/>
+			<class name="PDPTool.PDPEditorUI"/>
+			<class name="PDPTool.PDPEditorFilterSectionFunctionality"/>
+			<class name="PDPTool.PDPEditorCreateFileFromFilter"/>
+			<class name="PDPTool.PDPEditorCreateMultipleFilesFromFilters"/>
+        </classes>
+	</test>
+	  	<test name="Food Data Science Wizard" preserve-order="true">
+		<classes>
+			<class name="FoodDataScienceWizard.FoodIntakeChooseInputPage" />
+			<class name="FoodDataScienceWizard.NutrientIntakeChooseInputPage" />
+			<class name="FoodDataScienceWizard.IngredientIntakeChooseInputPage" />
+			<class name="FoodDataScienceWizard.ChemicalExposureChooseInputPage" />
+			<class name="FoodDataScienceWizard.ContaminantExposureChooseInputPage" />
+			<class name="FoodDataScienceWizard.FilterFunctionalityChooseInputPage" />
+			<class name="FoodDataScienceWizard.GroupToOutputStructureOutputPage" />
+			<class name="FoodDataScienceWizard.FDSRerunFoodIntakeAssessment" />
+			<class name="FoodDataScienceWizard.FDSRerunNutritionalIntakeAssessment" />
+			<class name="FoodDataScienceWizard.FDSRerunIngredientIntakeAssessment" />
+			<class name="FoodDataScienceWizard.FDSRerunChemicalExposureAssessment" />
+			<class name="FoodDataScienceWizard.FDSRerunContaminantExposureAssessment" />
+			<class name="FoodDataScienceWizard.FDSAssessmentOutput" />
+			<class name="FoodDataScienceWizard.FDSPageValidation" />
+			<class name="FoodDataScienceWizard.StratifyOutputStructureOutputPage" />
+			<class name="FoodDataScienceWizard.HeaderFunctionality" />	
+			<class name="FoodDataScienceWizard.AggregateGroupsStructureOutputPage" />		
+			<class name="FoodDataScienceWizard.AdditionalCalculationsPageUI" />	
+			<class name="FoodDataScienceWizard.AdditionalCalculationsPageFunctionality" />	
+			<class name="FoodDataScienceWizard.AdditionalCalculationsPageLimitAnalysisFunctionality" />	
+		</classes>
+	</test>                                                                                                    
+  	<test name="Account Access Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_AccountAccess.LogInPageValidation" />
+			<class name="Reg_AccountAccess.UserProfileAccountPage" />
+			<class name="Reg_AccountAccess.PasswordResetFuncViaAccountPage" />
+			<class name="Reg_AccountAccess.PasswordResetFuncViaForgotPasswordEmail" />
+			<class name="Reg_AccountAccess.TeamPage" />
+			<class name="Reg_AccountAccess.MyProfilePageFunctionality" />
+			<class name="Reg_AccountAccess.ForgotPasswordFunctionality" />
+		</classes>
+	</test>
+	<test name="REJV Tool Regression Tests" preserve-order="true">
+		<classes>
+			<class name="REJVTool.REJVDataInstallation"/>
+			<class name="REJVTool.REJVSideBarUI"/>
+			<class name="REJVTool.REJVSideBarSampleQueriesSection"/>
+			<class name="REJVTool.REJVSideBarTablesAndFieldsSection"/>
+			<class name="REJVTool.REJVRunGenericSelectQuery"/>
+			<class name="REJVTool.REJVRunActiveIngredientInventoryQuery"/>
+			<class name="REJVTool.REJVRunActiveIngredientApplicationQuery"/>
+			<class name="REJVTool.REJVRunCountDistinctQuery"/>
+			<class name="REJVTool.REJVRunJoiningTwoTablesQuery"/>
+			<class name="REJVTool.REJVPositiveTestingRunQueries"/>
+			<class name="REJVTool.REJVNegativeTestingRunQueries"/>
+			<class name="REJVTool.REJVPositiveTestingSaveResultsSampleQueries"/>
+			<class name="REJVTool.REJVPositiveTestingSaveResultsOwnQueries"/>
+			<class name="REJVTool.REJVNegativeTestingSaveResults"/>
+			<class name="REJVTool.REJVGroupByDistinct"/>
+			<class name="REJVTool.REJVResultsTable"/>
+			<class name="REJVTool.REJVDataAndUI"/>
+        </classes>
+        </test>
+	<test name="Import Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_Import.PageFunctionalityAndContents" />
+			<class name="Reg_Import.ImportOptionsFunctionality" />
+			<class name="Reg_Import.MatchingFunctionality" />
+		</classes>
+	</test>
+		<test name="Export Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_Export.MenuOptionVerification" />
+			<class name="Reg_Export.ActionExportPage" />
+		</classes>
+	</test>
+		<test name="EMHeader Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_EMHeader.ContentsActionsAndRedirects" />
+			<class name="Reg_EMHeader.SearchFunctionality" />
+		</classes>
+	</test>
+	  	<test name="Food Table - CARES" preserve-order="true">
+		<classes>
+			<class name="CaresFoodTable.foodTableComponents" />
+			<class name="CaresFoodTable.foodTableMenuOptions" />
+			<class name="CaresFoodTable.foodTableChildRows" />
+			<class name="CaresFoodTable.foodTableErrorSection" />
+			<class name="CaresFoodTable.foodTableValidation" />
+		</classes>
+	</test>		 	<test name="RIFM Wizard" preserve-order="true">
+		<classes>
+			<class name="RIFMWizard.demographicsPage" />
+			<class name="RIFMWizard.SubstancePage" />
+			<class name="RIFMWizard.DefaultRIFMFragrancesFunctionality" />
+		</classes>
+	</test>
+	
+</suite>	

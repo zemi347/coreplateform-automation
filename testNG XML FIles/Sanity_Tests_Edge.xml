@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Expert Models - Sanity Test">
+	<test name="Sanity Test" preserve-order="true">
+		<classes>
+			<class name="Reg_Editor.EditMenuNoWriteFunctionality" />
+			<class name="Reg_Editor.IconBarFunctionality" />
+			<class name="Reg_Editor.RightClickMenuFunctionality" />
+			<class name="Reg_EMHeader.ContentsActionsAndRedirects" />
+			<class name="PDPTool.PDPEditorCreateMultipleFilesFromFilters" />
+			<class name="reg_GenericWizard.GenericWizardPageFunctionality" />
+		</classes>
+	</test>
+		<test name="File System Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_FileSystem.SystemFolderRedirectAndNavigation" />
+			<class name="Reg_FileSystem.RenameFunctionality" />
+			<class name="Reg_FileSystem.CopyFunctionality" />
+			<class name="Reg_FileSystem.CopyToFunctionality" />
+			<class name="Reg_FileSystem.UndoFunctionality" />
+			<class name="Reg_FileSystem.TrashActionFunctionality" />
+			<class name="Reg_FileSystem.TrashFolderFunctionality" />
+			<class name="Reg_FileSystem.MoveFunctionality" />
+			<class name="Reg_FileSystem.SortFunctionality" />
+		</classes>
+	</test>
+		<test name="Results Viewer Regression Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_ResultsViewer.ResultsViewerComponents" />
+			<class name="Reg_ResultsViewer.InputTabFunctionality" />
+			<class name="Reg_ResultsViewer.TableTabsFunctionality" />	
+			<class name="Reg_ResultsViewer.ReportTabFunctionality" />
+		</classes>
+	</test>
+	<test name="File Picker Regression Tests Suite" preserve-order="true">
+		<classes>
+			<class name="Reg_FilePicker.LaunchingOptions" />
+			<class name="Reg_FilePicker.SelectValidFileFunctionality"/>
+			<class name="Reg_FilePicker.SelectInvalidFileFunctionality"/>
+			<class name="Reg_FilePicker.WritePermissions"/>
+			<class name="Reg_FilePicker.NonWritePermissions"/>
+		</classes>
+	</test>
+	<test name="Generic Wizard Regression Suite" preserve-order="true">
+		<classes>
+			<class name="reg_GenericWizard.GenericWizardHeaderFunctionality" />
+			<class name="reg_GenericWizard.GenericWizardPageFunctionality" />
+			<class name="reg_GenericWizard.GenericWizardTableFunctionality" />
+			<class name="reg_GenericWizard.GenericWizardFiltersFunctionality" />
+		</classes>
+	</test>
+	<test name="Filter UI Filter Section" preserve-order="true">
+		<classes>
+			<class name="Reg_Filter.UiFilterSection" />
+			<class name="Reg_Filter.ClearandCloseAddFilterAndDeleteFilter" />
+			<class name="Reg_Filter.HideFilterAndFilterStatusBar" />		
+			<class name="Reg_Filter.FilterTextFilterFunctionality" />
+			<class name="Reg_Filter.FilterNumericFilterFunctionality" />
+			<class name="Reg_Filter.FilterFilepickerFilterFunctionality" />
+			<class name="Reg_Filter.FilterSelectFilterFunctionality" />		
+			<class name="Reg_Filter.FilterCheckboxFilterFunctionality" />
+			<class name="Reg_Filter.FilterDistributionFilterFunctionality" />						
+		</classes>
+	</test>
+		<test name="PDP Tool Regression Tests" preserve-order="true">
+		<classes>
+			<class name="PDPTool.PDPLaunchingOptions"/>
+			<class name="PDPTool.PDPEditorUI"/>
+			<class name="PDPTool.PDPEditorFilterSectionFunctionality"/>
+			<class name="PDPTool.PDPEditorCreateFileFromFilter"/>
+			<class name="PDPTool.PDPEditorCreateMultipleFilesFromFilters"/>
+        </classes>
+	</test>
+</suite>

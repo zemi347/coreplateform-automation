@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Failed tests suite" preserve-order="true">
+	<test name="Failed tests" preserve-order="true">
+		<classes>            
+			<class name="Reg_Editor.RightClickMenuFunctionality"/>
+            <class name="reg_GenericWizard.GenericWizardHeaderFunctionality"/>
+            <class name="Reg_FilePicker.WritePermissions"/>
+            <class name="REJVTool.REJVSideBarUI"/>
+            <class name="REJVTool.REJVSideBarTablesAndFieldsSection"/>
+            <class name="REJVTool.REJVRunActiveIngredientInventoryQuery"/>
+            <class name="REJVTool.REJVRunCountDistinctQuery"/>
+            <class name="REJVTool.REJVRunJoiningTwoTablesQuery"/>
+            <class name="REJVTool.REJVNegativeTestingRunQueries"/>
+            <class name="REJVTool.REJVPositiveTestingSaveResultsOwnQueries"/>
+            <class name="REJVTool.REJVNegativeTestingSaveResults"/>
+            <class name="Reg_FileSystem.SystemFolderRedirectAndNavigation"/>
+            <class name="REJVTool.REJVNegativeTestingSaveResults"/>
+            <class name="Reg_AccountAccess.TeamPage"/>
+            <class name="Reg_FileSystem.SystemFolderRedirectAndNavigation"/>
+		</classes>
+	</test>
+</suite>
