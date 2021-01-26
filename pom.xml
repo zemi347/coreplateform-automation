@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>SuperMeal</groupId>
-    <artifactId>JAVA-APPLICATION</artifactId>
+    <artifactId>TEST-CORE</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>TEST-JAVA-APPLICATION</name>
+    <name>TEST-CORE</name>
     <url>http://supermeal.ae</url>
     <packaging>jar</packaging>
 
@@ -136,6 +136,9 @@
         <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
         <squareup.okhttp3>4.9.0</squareup.okhttp3>
 
+        <!-- ###############################  org.apache.poi ################################ -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <java.api.poi>5.0.0</java.api.poi>
 
 
     </properties>
@@ -494,6 +497,18 @@
         <!--              <artifactId>okhttp</artifactId>-->
         <!--              <version>${squareup.okhttp3}</version>-->
         <!--          </dependency>-->
+
+        <!-- ################################################################################ -->
+        <!-- ###############################  org.apache.poi ################################ -->
+        <!--             Apache POI - Java API To Access Microsoft Format Files               -->
+        <!-- ################################################################################ -->
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>${java.api.poi}</version>
+        </dependency>
+
 
     </dependencies>
 

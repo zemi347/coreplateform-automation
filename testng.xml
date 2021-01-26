@@ -9,9 +9,10 @@
 		  <parameter name = "myPassword" value="automation123"/>
 
 		  <class name="Reg_EMHeader.SearchFunctionality" />
+		  
 			-->
-			<class name="TESTAPP" />
-
+			
+			<class name="tests.Order" />
 		</classes>
 	</test>
 
