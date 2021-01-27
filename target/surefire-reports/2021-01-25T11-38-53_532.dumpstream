@@ -1,4 +1,0 @@
-# Created at 2021-01-25T11:38:54.692
-Boot Manifest-JAR contains absolute paths in classpath 'D:\GITLAB\AUTOMATION\coreplateform-automation\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-

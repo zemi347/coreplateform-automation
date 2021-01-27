@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TEST-CORE" />
+        <module name="coreplateform" />
+        <module name="JAVA-APPLICATION" />
         <module name="coreplateform-automation" />
       </profile>
     </annotationProcessing>

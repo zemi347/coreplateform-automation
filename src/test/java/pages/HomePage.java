@@ -23,9 +23,31 @@ public class HomePage {
 	@FindBy(id = "actionVisitorLogin")
 	public WebElement btn_actionVisitorLogin;
 
+	@FindBy(id = "UserName")
+	public WebElement txtField_username;
+
+	@FindBy(id = "Password")
+	public WebElement txtField_Password;
+
+	@FindBy(id = "ctl00_cphContentBody_ctl01_loginControl_LoginButton")
+	public WebElement btn_Submit_Login;
+
 	@FindBy(xpath = "//*[@id='MyAccountAction']/span[1]")
 	public WebElement lbl_UserName;
 
+
+
+	public void PressLoginButton()
+	{
+		try {
+			System.out.print("Press Log In Button \n");
+			driver.findElement ((By) PageHomeTitle).click ();
+			Thread.sleep(500);
+
+		} catch (Exception e) {
+			e.getMessage ();
+		}
+	}
 
 
 	public HomePage(WebDriver driver) {

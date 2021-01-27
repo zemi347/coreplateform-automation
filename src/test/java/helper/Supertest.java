@@ -1,4 +1,6 @@
 package helper;
+
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
@@ -11,6 +13,7 @@ public class Supertest {
 
     // Pages fields declaration:
     protected CommonUtils               _commonUtils;
+   // protected Reportmail                _reportmail ;
     protected BlogPage                  _blogpage;
     protected BurgerMenu                _burgerMenu;
     protected CheckOutPage              _checkcutpage;
@@ -22,7 +25,6 @@ public class Supertest {
     protected RestaurantRegisterPage    _restaurantregisterpage;
     protected RestaurantSearchPage      _restaurantsearchpage;
     protected ThankyouPage              _thankyoupage;
-
 
 
     // Reports fields:
@@ -45,6 +47,7 @@ public class Supertest {
 
         System.out.println("beforeClassSetup");
         _commonUtils              = new CommonUtils                  (driver);
+       // _reportmail              = new Reportmail                    (      );
         _blogpage                 = new BlogPage                     (driver);
         _burgerMenu               = new BurgerMenu                   (driver);
         _checkcutpage             = new CheckOutPage                 (driver);
@@ -57,10 +60,10 @@ public class Supertest {
         _restaurantsearchpage     = new RestaurantSearchPage         (driver);
         _thankyoupage             = new ThankyouPage                 (driver);
 
-        time = System.currentTimeMillis();
+
         ds.analyzeLog();
 
-        driver.manage().window().maximize();
+
         /*
         driver.manage().window().setPosition(new Point(0, 0));
         driver.manage().window().setSize(new Dimension(1920, 1080));
@@ -68,9 +71,7 @@ public class Supertest {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         // Set the deployment server
-        report = ExtentFactory.getInstance(this);
-        logger = report.startTest("Loading Home Page.");
-        logger.log(LogStatus.PASS, "test user.");
+         report = ExtentFactory.getInstance(this);
 
 
     }
@@ -98,23 +99,16 @@ public class Supertest {
 
         System.out.println("Tearing down test " + getClass().getName() + "....");
         logger = report.startTest("Start tear down.");
-        /*if (System.getProperty("browser") != null) {
-         if (System.getProperty("browser").contains("edge")) {
-
-                logger.log(LogStatus.PASS, "Go to home page and logout.");
-                driver.get(CredentialsData.getBaseURL() + "file/my-data");
-                cu.waitThenSingleClick(emHeaderPage.userProfileIconButton, 4);
-                cu.clickElements(emHeaderPage.logoutButton);
-                cu.waitFor(Duration.ofSeconds(2));
-            }
-
-        }*/
-        logger.log(LogStatus.PASS, "Clear cache and delete user profile.");
+        logger.log(LogStatus.PASS, "Go to Main Menu.");
+        _commonUtils.leftClickElement(_burgerMenu.buttonslideleft);
+        _commonUtils.leftClickElement(_burgerMenu.buttonlogoout_left);
+        _commonUtils.waitFor(Duration.ofSeconds(2));
+        logger.log(LogStatus.PASS, "Clear cache and logout user profile.");
         framework.Constants.deleteAllBrowserCookies();
         logger.log(LogStatus.PASS, "Tear Down Successfully.");
         report.endTest(logger);
         report.flush();
-        time = System.currentTimeMillis() - time;
+
 
 
     }
@@ -122,8 +116,5 @@ public class Supertest {
     @AfterSuite(alwaysRun = true)
     public void closeBrowser() {
         driver.close();
-        driver.quit();
-
-
     }
 }

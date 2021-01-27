@@ -45,10 +45,13 @@ public class Constants {
 			File source = ts.getScreenshotAs(OutputType.FILE);
 			// String dest = "C:\\Workspace\\Automation\\Automation
 			// Results\\Screenshots\\"+screenshotName+".png";
-			String dest = System.getProperty("user.dir") + "test-output/automation-results/expert-models/screenshots/"
-						+ screenshotName + ".png";
+			String dest = System.getProperty("user.dir") + "/test-output/automation-results/expert-models/screenshots/"
+				+ screenshotName + ".png";
+			if (Constants.OSDetector() == "Mac") {
+				dest = System.getProperty("user.dir") + "/test-output/automation-results/expert-models/screenshots/"
+					+ screenshotName + ".png";
+			}
 			File destination = new File(dest);
-
 			FileUtils.copyFile(source, destination);
 			return dest;
 		} catch (Exception e) {
@@ -339,7 +342,7 @@ public class Constants {
 		String os = System.getProperty("os.name").toLowerCase();
 		if (os.contains("win")) {
 			return "Windows";
-		} else if (os.contains("nux") || os.contains("nix")||os.contains("cen")) {
+		} else if (os.contains("nux") || os.contains("nix")) {
 			return "Linux";
 		} else if (os.contains("mac")) {
 			return "Mac";

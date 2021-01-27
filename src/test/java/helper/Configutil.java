@@ -15,7 +15,7 @@ public class Configutil {
     public static Properties configdatafile(String filename)
     {
         Properties Prop =new Properties();
-        File datafile = new File( System.getProperty("user.dir") + "/Util/"+filename);
+        File datafile = new File( System.getProperty("user.dir") + "\\Util\\"+filename);
         FileInputStream inputfilestream = null;
         try {
             inputfilestream = new FileInputStream(datafile);

@@ -2,568 +2,571 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>SuperMeal</groupId>
-    <artifactId>TEST-CORE</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>TEST-CORE</name>
-    <url>http://supermeal.ae</url>
-    <packaging>jar</packaging>
+  <groupId>SuperMeal</groupId>
+  <artifactId>TEST-CORE</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>TEST-CORE</name>
+  <url>http://supermeal.ae</url>
+  <packaging>jar</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-
-
-        <!-- ################################################################################ -->
-        <!-- ###############################  dependencies  ################################# -->
-        <!-- ################################################################################ -->
-
-        <!-- ##################################  maven  ##################################### -->
-        <!-- https://maven.apache.org/surefire/maven-surefire-plugin/dependency-info.html     -->
-        <maven.surefire.plugin>3.0.0-M5</maven.surefire.plugin>
-<!--        <maven.surefire.plugin>2.22.1</maven.surefire.plugin>-->
-<!--        <maven.surefire.plugin>2.19.1</maven.surefire.plugin>-->
-<!--        <maven.surefire.plugin>3.0.0-M5</maven.surefire.plugin>-->
-        <!-- ##################################  maven  ##################################### -->
-        <!--https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-        <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
-        <!--<maven.compiler.plugin>3.8.0</maven.compiler.plugin>-->
-
-        <!-- ##################################  maven  ##################################### -->
-        <!--   https://maven.apache.org/plugins/maven-resources-plugin/dependency-info.html   -->
-        <maven.resources.plugin>3.2.0</maven.resources.plugin>
-        <!--<maven.resources.plugin>3.0.2</maven.resources.plugin>-->
-
-        <!-- ##################################  maven  ##################################### -->
-        <maven.project.info.reports.plugin>3.1.1</maven.project.info.reports.plugin>
-        <!--<maven.project.info.reports.plugin>3.0.0</maven.project.info.reports.plugin>-->
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
 
 
-        <!-- ##################################  maven  ##################################### -->
-        <!--     https://maven.apache.org/plugins/maven-clean-plugin/dependency-info.html     -->
-        <maven.clean.plugin>3.1.0</maven.clean.plugin>
+    <!-- ################################################################################ -->
+    <!-- ###############################  dependencies  ################################# -->
+    <!-- ################################################################################ -->
 
-        <!-- ##################################  maven  ##################################### -->
-        <!--    https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin  -->
-        <maven.jar.plugin>3.2.0</maven.jar.plugin>
+    <!-- ##################################  maven  ##################################### -->
+    <!-- https://maven.apache.org/surefire/maven-surefire-plugin/dependency-info.html     -->
+    <maven.surefire.plugin>3.0.0-M5</maven.surefire.plugin>
+    <!--        <maven.surefire.plugin>2.22.1</maven.surefire.plugin>-->
+    <!--        <maven.surefire.plugin>2.19.1</maven.surefire.plugin>-->
+    <!--        <maven.surefire.plugin>3.0.0-M5</maven.surefire.plugin>-->
+    <!-- ##################################  maven  ##################################### -->
+    <!--https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+    <maven.compiler.plugin>3.8.1</maven.compiler.plugin>
+    <!--<maven.compiler.plugin>3.8.0</maven.compiler.plugin>-->
 
-        <!-- ##################################  maven  ##################################### -->
-        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
-        <maven.install.plugin>3.0.0-M1</maven.install.plugin>
-        <!--      <maven.install.plugin>2.5.2</maven.install.plugin>-->
+    <!-- ##################################  maven  ##################################### -->
+    <!--   https://maven.apache.org/plugins/maven-resources-plugin/dependency-info.html   -->
+    <maven.resources.plugin>3.2.0</maven.resources.plugin>
+    <!--<maven.resources.plugin>3.0.2</maven.resources.plugin>-->
 
-        <!-- ##################################  maven  ##################################### -->
-        <!--    https://maven.apache.org/plugins/maven-site-plugin/dependency-info.html       -->
-        <maven.site.plugin>3.9.1</maven.site.plugin>
-        <!--<maven.site.plugin>3.7.1</maven.site.plugin>-->
-
-        <!-- ##################################  maven  ##################################### -->
-        <!--     https://maven.apache.org/plugins/maven-deploy-plugin/dependency-info.html    -->
-        <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
-        <!--<maven.deploy.plugin>2.8.2</maven.deploy.plugin>-->
-
-        <!-- ###############################  selenium  ##################################### -->
-        <!--https://mvnrepository.com/artifact/org.seleniumhq.selenium -->
-        <selenium.version>3.141.59</selenium.version>
-        <!--<selenium.version>4.0.0-alpha-7</selenium.version>-->
-
-        <!-- #############################  webdrivermanager  ############################### -->
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <bonigarcia.webdrivermanager>4.2.2</bonigarcia.webdrivermanager>
-
-        <!-- ################################  appium  ###################################### -->
-        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-        <appium.version>7.4.1</appium.version>
-        <!--    <appium.version>7.3.0</appium.version>-->
-
-        <!-- ################################  rest-assured  ################################ -->
-        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-        <rest.assured>4.3.3</rest.assured>
-
-        <!-- #################################  testNG  ##################################### -->
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <testng>7.1.0</testng>
-
-        <!-- ##################################  junit  ##################################### -->
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <junit>4.13.1</junit>
-
-        <!-- ##################################  mysql  ##################################### -->
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <mysql.connector.java>8.0.22</mysql.connector.java>
-
-        <!-- ##################################  email  ##################################### -->
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
-        <commons.email>1.5</commons.email>
-
-        <!-- #################################  commons-io  ################################# -->
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-        <commons.io>2.8.0</commons.io>
-
-        <!-- ###############################  commons-codec  ################################ -->
-        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-        <commons.codec>1.15</commons.codec>
-
-        <!-- ##################################  Report  #################################### -->
-        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
-        <relevantcodes.extentreports>2.41.2</relevantcodes.extentreports>
-
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <aventstack.extentreports>5.0.6</aventstack.extentreports>
-
-        <!-- ############################  sourceforge.tess4j  ############################## -->
-        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-        <sourceforge.tess4j>4.5.1</sourceforge.tess4j>
-        <!--    <sourceforge.tess4j>4.5.4</sourceforge.tess4j>-->
-
-        <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
-        <sourceforge.jexcelapi.jxl>2.6.12</sourceforge.jexcelapi.jxl>
-
-        <!-- ###############################  javax-servlet  ################################ -->
-        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-        <javax.servlet.jstl>1.2</javax.servlet.jstl>
-
-        <!-- #################################  google-guava  ############################### -->
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-        <google.guava>23.0</google.guava>
-        <!--<google.guava>30.1-jre</google.guava>-->
-
-        <!-- ##############################  squareup.okhttp3  ############################## -->
-        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
-        <squareup.okhttp3>4.9.0</squareup.okhttp3>
-
-        <!-- ###############################  org.apache.poi ################################ -->
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <java.api.poi>5.0.0</java.api.poi>
+    <!-- ##################################  maven  ##################################### -->
+    <maven.project.info.reports.plugin>3.1.1</maven.project.info.reports.plugin>
+    <!--<maven.project.info.reports.plugin>3.0.0</maven.project.info.reports.plugin>-->
 
 
-    </properties>
+    <!-- ##################################  maven  ##################################### -->
+    <!--     https://maven.apache.org/plugins/maven-clean-plugin/dependency-info.html     -->
+    <maven.clean.plugin>3.1.0</maven.clean.plugin>
 
-    <dependencies>
-        <!-- ################################################################################ -->
-        <!-- ##########################  maven-compiler-plugin  ############################# -->
-        <!--         The Compiler Plugin is used to compile the sources of your project.      -->
-        <!-- ################################################################################ -->
-        <!--
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>${maven.compiler.plugin}</version>
-        </dependency>
+    <!-- ##################################  maven  ##################################### -->
+    <!--    https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-jar-plugin  -->
+    <maven.jar.plugin>3.2.0</maven.jar.plugin>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-resources-plugin</artifactId>
-            <version>${maven.resources.plugin}</version>
-            <type>maven-plugin</type>
-        </dependency>
+    <!-- ##################################  maven  ##################################### -->
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
+    <maven.install.plugin>3.0.0-M1</maven.install.plugin>
+    <!--      <maven.install.plugin>2.5.2</maven.install.plugin>-->
+
+    <!-- ##################################  maven  ##################################### -->
+    <!--    https://maven.apache.org/plugins/maven-site-plugin/dependency-info.html       -->
+    <maven.site.plugin>3.9.1</maven.site.plugin>
+    <!--<maven.site.plugin>3.7.1</maven.site.plugin>-->
+
+    <!-- ##################################  maven  ##################################### -->
+    <!--     https://maven.apache.org/plugins/maven-deploy-plugin/dependency-info.html    -->
+    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
+    <!--<maven.deploy.plugin>2.8.2</maven.deploy.plugin>-->
+
+    <!-- ###############################  selenium  ##################################### -->
+    <!--https://mvnrepository.com/artifact/org.seleniumhq.selenium -->
+    <selenium.version>3.141.59</selenium.version>
+    <!--<selenium.version>4.0.0-alpha-7</selenium.version>-->
+
+    <!-- #############################  webdrivermanager  ############################### -->
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+    <bonigarcia.webdrivermanager>4.2.2</bonigarcia.webdrivermanager>
+
+    <!-- ################################  appium  ###################################### -->
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <appium.version>7.4.1</appium.version>
+    <!--    <appium.version>7.3.0</appium.version>-->
+
+    <!-- ################################  rest-assured  ################################ -->
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+    <rest.assured>4.3.3</rest.assured>
+
+    <!-- #################################  testNG  ##################################### -->
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <testng>7.1.0</testng>
+
+    <!-- ##################################  junit  ##################################### -->
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <junit>4.13.1</junit>
+
+    <!-- ##################################  mysql  ##################################### -->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <mysql.connector.java>8.0.22</mysql.connector.java>
+
+    <!-- ##################################  email  ##################################### -->
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+    <commons.email>1.5</commons.email>
+
+    <!-- #################################  commons-io  ################################# -->
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+    <commons.io>2.8.0</commons.io>
+
+    <!-- ###############################  commons-codec  ################################ -->
+    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+    <commons.codec>1.15</commons.codec>
+
+    <!-- ##################################  Report  #################################### -->
+    <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+    <relevantcodes.extentreports>2.41.2</relevantcodes.extentreports>
+
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <aventstack.extentreports>5.0.6</aventstack.extentreports>
+
+    <!-- ############################  sourceforge.tess4j  ############################## -->
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+    <sourceforge.tess4j>4.5.1</sourceforge.tess4j>
+    <!--    <sourceforge.tess4j>4.5.4</sourceforge.tess4j>-->
+
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+    <sourceforge.jexcelapi.jxl>2.6.12</sourceforge.jexcelapi.jxl>
+
+    <!-- ###############################  javax-servlet  ################################ -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+    <javax.servlet.jstl>1.2</javax.servlet.jstl>
+
+    <!-- #################################  google-guava  ############################### -->
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <google.guava>23.0</google.guava>
+    <!--<google.guava>30.1-jre</google.guava>-->
+
+    <!-- ##############################  squareup.okhttp3  ############################## -->
+    <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+    <squareup.okhttp3>4.9.0</squareup.okhttp3>
 
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-project-info-reports-plugin</artifactId>
-            <version>${maven.project.info.reports.plugin}</version>
-            <type>maven-plugin</type>
-        </dependency>
+
+  </properties>
+
+  <dependencies>
+    <!-- ################################################################################ -->
+    <!-- ##########################  maven-compiler-plugin  ############################# -->
+    <!--         The Compiler Plugin is used to compile the sources of your project.      -->
+    <!-- ################################################################################ -->
+    <!--
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.plugin}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${maven.resources.plugin}</version>
+        <type>maven-plugin</type>
+    </dependency>
 
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-clean-plugin</artifactId>
-            <version>${maven.clean.plugin}</version>
-            <type>maven-plugin</type>
-        </dependency>
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>${maven.project.info.reports.plugin}</version>
+        <type>maven-plugin</type>
+    </dependency>
 
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>${maven.jar.plugin}</version>
-            <type>maven-plugin</type>
-        </dependency>
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>${maven.clean.plugin}</version>
+        <type>maven-plugin</type>
+    </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-install-plugin</artifactId>
-            <version>${maven.install.plugin}</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-deploy-plugin</artifactId>
-            <version>${maven.deploy.plugin}</version>
-            <type>maven-plugin</type>
-        </dependency>
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>${maven.jar.plugin}</version>
+        <type>maven-plugin</type>
+    </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>${maven.site.plugin}</version>
-            <type>maven-plugin</type>
-        </dependency>
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>${maven.install.plugin}</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${maven.deploy.plugin}</version>
+        <type>maven-plugin</type>
+    </dependency>
+
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>${maven.site.plugin}</version>
+        <type>maven-plugin</type>
+    </dependency>
 
 -->
 
-        <!-- ################################################################################ -->
-        <!-- ###############################  selenium  ##################################### -->
-        <!--                          Selenium automates browsers.                            -->
-        <!--          That's it! What you do with that power is entirely up to you            -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ###############################  selenium  ##################################### -->
+    <!--                          Selenium automates browsers.                            -->
+    <!--          That's it! What you do with that power is entirely up to you            -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!--                          Selenium automates browsers.                             -->
-        <!--          That's it! What you do with that power is entirely up to you             -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!--                          Selenium automates browsers.                             -->
-        <!--          That's it! What you do with that power is entirely up to you             -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-edge-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
+    <!--                          Selenium automates browsers.                             -->
+    <!--          That's it! What you do with that power is entirely up to you             -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-chrome-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!--                          Selenium automates browsers.                             -->
-        <!--          That's it! What you do with that power is entirely up to you             -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-ie-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
+    <!--                          Selenium automates browsers.                             -->
+    <!--          That's it! What you do with that power is entirely up to you             -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-edge-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!--                          Selenium automates browsers.                              -->
-        <!--          That's it! What you do with that power is entirely up to you              -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
+    <!--                          Selenium automates browsers.                             -->
+    <!--          That's it! What you do with that power is entirely up to you             -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-ie-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!--                          Selenium automates browsers.                             -->
-        <!--          That's it! What you do with that power is entirely up to you             -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-safari-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
+    <!--                          Selenium automates browsers.                              -->
+    <!--          That's it! What you do with that power is entirely up to you              -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-firefox-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- #############################  webdrivermanager  ############################### -->
-        <!--      Automatic Selenium WebDriver binaries management in runtime for Java        -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${bonigarcia.webdrivermanager}</version>
-        </dependency>
+    <!--                          Selenium automates browsers.                             -->
+    <!--          That's it! What you do with that power is entirely up to you             -->
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-safari-driver</artifactId>
+      <version>${selenium.version}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ################################  appium  ###################################### -->
-        <!--                   Java client for Appium Mobile Webdriver                        -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>${appium.version}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- #############################  webdrivermanager  ############################### -->
+    <!--      Automatic Selenium WebDriver binaries management in runtime for Java        -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${bonigarcia.webdrivermanager}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ################################  rest-assured  ################################ -->
-        <!--                  Java DSL for easy testing of REST services                      -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest.assured}</version>
-            <scope>test</scope>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ################################  appium  ###################################### -->
+    <!--                   Java client for Appium Mobile Webdriver                        -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+      <groupId>io.appium</groupId>
+      <artifactId>java-client</artifactId>
+      <version>${appium.version}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- #################################  testNG  ##################################### -->
-        <!--                            testing framework for Java                            -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng}</version>
-            <scope>test</scope>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ################################  rest-assured  ################################ -->
+    <!--                  Java DSL for easy testing of REST services                      -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>${rest.assured}</version>
+      <scope>test</scope>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ##################################  junit  ##################################### -->
-        <!-- JUnit is a unit testing framework for Java, created by Erich Gamma and Kent Beck.-->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <!--    <dependency>-->
-        <!--      <groupId>junit</groupId>-->
-        <!--      <artifactId>junit</artifactId>-->
-        <!--      <version>${junit}</version>-->
-        <!--      <scope>test</scope>-->
-        <!--    </dependency>-->
+    <!-- ################################################################################ -->
+    <!-- #################################  testNG  ##################################### -->
+    <!--                            testing framework for Java                            -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testng}</version>
+      <scope>test</scope>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ##################################  mysql  ##################################### -->
-        <!--                            JDBC Type 4 driver for MySQL                          -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.connector.java}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ##################################  junit  ##################################### -->
+    <!-- JUnit is a unit testing framework for Java, created by Erich Gamma and Kent Beck.-->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+    <!--    <dependency>-->
+    <!--      <groupId>junit</groupId>-->
+    <!--      <artifactId>junit</artifactId>-->
+    <!--      <version>${junit}</version>-->
+    <!--      <scope>test</scope>-->
+    <!--    </dependency>-->
 
 
-        <!-- ################################################################################ -->
-        <!-- ##################################  email  ##################################### -->
-        <!--          Apache Commons Email aims to provide an API for sending email.          -->
-        <!--         It is built on top of the JavaMail API, which it aims to simplify.       -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-email</artifactId>
-            <version>${commons.email}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ##################################  mysql  ##################################### -->
+    <!--                            JDBC Type 4 driver for MySQL                          -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.connector.java}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- #################################  commons-io  ################################# -->
-        <!--  The Apache Commons IO library contains utility classes, stream implementations, -->
-        <!--  file filters, file comparators, endian transformation classes, and much more.   -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons.io}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ##################################  email  ##################################### -->
+    <!--          Apache Commons Email aims to provide an API for sending email.          -->
+    <!--         It is built on top of the JavaMail API, which it aims to simplify.       -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-email</artifactId>
+      <version>${commons.email}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ###############################  commons-codec  ################################ -->
-        <!--           The Apache Commons Codec package contains simple encoder and           -->
-        <!--            decoders for various formats such as Base64 and Hexadecimal.          -->
-        <!--              In addition to these widely used encoders and decoders,             -->
-        <!--  the codec package also maintains a collection of phonetic encoding utilities.   -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-        <dependency>
-            <groupId>commons-codec</groupId>
-            <artifactId>commons-codec</artifactId>
-            <version>${commons.codec}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- #################################  commons-io  ################################# -->
+    <!--  The Apache Commons IO library contains utility classes, stream implementations, -->
+    <!--  file filters, file comparators, endian transformation classes, and much more.   -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons.io}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ##################################  Report  #################################### -->
-        <!--              An open-source reporting library for Java, .Net and Ruby.           -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
-        <dependency>
-            <groupId>com.relevantcodes</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>${relevantcodes.extentreports}</version>
-        </dependency>
-
-        <!-- ################################################################################ -->
-        <!-- ##################################  Report  #################################### -->
-        <!--                                Extent Reports library                            -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
-        <!--      <dependency>-->
-        <!--          <groupId>com.aventstack</groupId>-->
-        <!--          <artifactId>extentreports</artifactId>-->
-        <!--          <version>${aventstack.extentreports}</version>-->
-        <!--      </dependency>-->
+    <!-- ################################################################################ -->
+    <!-- ###############################  commons-codec  ################################ -->
+    <!--           The Apache Commons Codec package contains simple encoder and           -->
+    <!--            decoders for various formats such as Base64 and Hexadecimal.          -->
+    <!--              In addition to these widely used encoders and decoders,             -->
+    <!--  the codec package also maintains a collection of phonetic encoding utilities.   -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${commons.codec}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ############################  sourceforge.tess4j  ############################## -->
-        <!--          #Tess4J ## Description: A Java JNA wrapper for Tesseract OCR API.       -->
-        <!--          Tess4J is released and distributed under the Apache License,            -->
-        <!--      v2.0. ## Features: The library provides optical character recognition       -->
-        <!--        (OCR) support for: TIFF, JPEG, GIF, PNG, and BMP image formats            -->
-        <!--                    Multi-page TIFF images PDF document format                    -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-        <dependency>
-            <groupId>net.sourceforge.tess4j</groupId>
-            <artifactId>tess4j</artifactId>
-            <version>${sourceforge.tess4j}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ##################################  Report  #################################### -->
+    <!--              An open-source reporting library for Java, .Net and Ruby.           -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+    <dependency>
+      <groupId>com.relevantcodes</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>${relevantcodes.extentreports}</version>
+    </dependency>
+
+    <!-- ################################################################################ -->
+    <!-- ##################################  Report  #################################### -->
+    <!--                                Extent Reports library                            -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+    <!--      <dependency>-->
+    <!--          <groupId>com.aventstack</groupId>-->
+    <!--          <artifactId>extentreports</artifactId>-->
+    <!--          <version>${aventstack.extentreports}</version>-->
+    <!--      </dependency>-->
 
 
-        <!-- ################################################################################ -->
-        <!-- ###########################  sourceforge.jexcelapi  ############################ -->
-        <!--   A set of annotations used for code inspection support and code documentation.  -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
-        <dependency>
-            <groupId>net.sourceforge.jexcelapi</groupId>
-            <artifactId>jxl</artifactId>
-            <version>${sourceforge.jexcelapi.jxl}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ############################  sourceforge.tess4j  ############################## -->
+    <!--          #Tess4J ## Description: A Java JNA wrapper for Tesseract OCR API.       -->
+    <!--          Tess4J is released and distributed under the Apache License,            -->
+    <!--      v2.0. ## Features: The library provides optical character recognition       -->
+    <!--        (OCR) support for: TIFF, JPEG, GIF, PNG, and BMP image formats            -->
+    <!--                    Multi-page TIFF images PDF document format                    -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
+    <dependency>
+      <groupId>net.sourceforge.tess4j</groupId>
+      <artifactId>tess4j</artifactId>
+      <version>${sourceforge.tess4j}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- #################################  google-guava  ############################### -->
-        <!-- Guava is a suite of core and expanded libraries that include utility classes,    -->
-        <!--              Google's collections, I/O classes, and much more                    -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${google.guava}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- ###########################  sourceforge.jexcelapi  ############################ -->
+    <!--   A set of annotations used for code inspection support and code documentation.  -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
+    <dependency>
+      <groupId>net.sourceforge.jexcelapi</groupId>
+      <artifactId>jxl</artifactId>
+      <version>${sourceforge.jexcelapi.jxl}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ###############################  javax-servlet  ################################ -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${javax.servlet.jstl}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- #################################  google-guava  ############################### -->
+    <!-- Guava is a suite of core and expanded libraries that include utility classes,    -->
+    <!--              Google's collections, I/O classes, and much more                    -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${google.guava}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- #############################  jetbrains annotations  ########################## -->
-        <!--  A set of annotations used for code inspection support and code documentation.   -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
-        <!--    <dependency>-->
-        <!--      <groupId>org.jetbrains</groupId>-->
-        <!--      <artifactId>annotations</artifactId>-->
-        <!--      <version>RELEASE</version>-->
-        <!--      <scope>compile</scope>-->
-        <!--    </dependency>-->
+    <!-- ################################################################################ -->
+    <!-- ###############################  javax-servlet  ################################ -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>${javax.servlet.jstl}</version>
+    </dependency>
 
 
-        <!-- ################################################################################ -->
-        <!-- ##########################  jetbrains annotations-java5 ######################## -->
-        <!--  A set of annotations used for code inspection support and code documentation.   -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations-java5 -->
-        <!--    <dependency>-->
-        <!--      <groupId>org.jetbrains</groupId>-->
-        <!--      <artifactId>annotations-java5</artifactId>-->
-        <!--      <version>RELEASE</version>-->
-        <!--      <scope>compile</scope>-->
-        <!--    </dependency>-->
-
-        <!-- ################################################################################ -->
-        <!-- ##############################  squareup.okhttp3  ############################## -->
-        <!-- ################################################################################ -->
-
-        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
-        <!--          <dependency>-->
-        <!--              <groupId>com.squareup.okhttp3</groupId>-->
-        <!--              <artifactId>okhttp</artifactId>-->
-        <!--              <version>${squareup.okhttp3}</version>-->
-        <!--          </dependency>-->
-
-        <!-- ################################################################################ -->
-        <!-- ###############################  org.apache.poi ################################ -->
-        <!--             Apache POI - Java API To Access Microsoft Format Files               -->
-        <!-- ################################################################################ -->
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>${java.api.poi}</version>
-        </dependency>
+    <!-- ################################################################################ -->
+    <!-- #############################  jetbrains annotations  ########################## -->
+    <!--  A set of annotations used for code inspection support and code documentation.   -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations -->
+    <!--    <dependency>-->
+    <!--      <groupId>org.jetbrains</groupId>-->
+    <!--      <artifactId>annotations</artifactId>-->
+    <!--      <version>RELEASE</version>-->
+    <!--      <scope>compile</scope>-->
+    <!--    </dependency>-->
 
 
-    </dependencies>
+    <!-- ################################################################################ -->
+    <!-- ##########################  jetbrains annotations-java5 ######################## -->
+    <!--  A set of annotations used for code inspection support and code documentation.   -->
+    <!-- ################################################################################ -->
+    <!-- https://mvnrepository.com/artifact/org.jetbrains/annotations-java5 -->
+    <!--    <dependency>-->
+    <!--      <groupId>org.jetbrains</groupId>-->
+    <!--      <artifactId>annotations-java5</artifactId>-->
+    <!--      <version>RELEASE</version>-->
+    <!--      <scope>compile</scope>-->
+    <!--    </dependency>-->
+
+    <!-- ################################################################################ -->
+    <!-- ##############################  squareup.okhttp3  ############################## -->
+    <!-- ################################################################################ -->
+
+    <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+    <!--          <dependency>-->
+    <!--              <groupId>com.squareup.okhttp3</groupId>-->
+    <!--              <artifactId>okhttp</artifactId>-->
+    <!--              <version>${squareup.okhttp3}</version>-->
+    <!--          </dependency>-->
+
+  </dependencies>
 
 
-    <build>
-        <pluginManagement>
-          <plugins>
-              <plugin>
-                  <groupId>org.apache.maven.plugins</groupId>
-                  <artifactId>maven-surefire-plugin</artifactId>
-                  <version>${maven.surefire.plugin}</version>
-                  <configuration>
-                      <suiteXmlFiles>
-                          <suiteXmlFile>testng.xml</suiteXmlFile>
-                      </suiteXmlFiles>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven.surefire.plugin}</version>
 
-<!--                          <useSystemClassLoader>false</useSystemClassLoader>-->
+          <!-- ###################### Jenkins Build Parameters#################### -->
 
-                  </configuration>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-compiler-plugin</artifactId>
-                  <version>${maven.compiler.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-resources-plugin</artifactId>
-                  <version>${maven.resources.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-project-info-reports-plugin</artifactId>
-                  <version>${maven.project.info.reports.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-clean-plugin</artifactId>
-                  <version>${maven.clean.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-jar-plugin</artifactId>
-                  <version>${maven.jar.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-install-plugin</artifactId>
-                  <version>${maven.install.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-site-plugin</artifactId>
-                  <version>${maven.site.plugin}</version>
-              </plugin>
-              <plugin>
-                  <artifactId>maven-deploy-plugin</artifactId>
-                  <version>${maven.deploy.plugin}</version>
-              </plugin>
+          <!--                  <browser>${browser}</browser>-->
+          <!--                  <deployment>${deployment}</deployment>-->
+          <!--                  <seleniumGrid>${seleniumGrid}</seleniumGrid>-->
+          <!--                  <threadCount>0</threadCount>-->
 
 
-          </plugins>
-        </pluginManagement>
-      </build>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>testng.xml</suiteXmlFile>
+
+              <!--                          <suiteXmlFile>testNG XML Files\${suiteXmlFile}</suiteXmlFile>-->
+            </suiteXmlFiles>
+            <!--                          <useSystemClassLoader>false</useSystemClassLoader>-->
+          </configuration>
+          <!-- ############################### END ############################## -->
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven.compiler.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven.resources.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${maven.project.info.reports.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${maven.clean.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven.jar.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${maven.install.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${maven.site.plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven.deploy.plugin}</version>
+        </plugin>
+
+
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
